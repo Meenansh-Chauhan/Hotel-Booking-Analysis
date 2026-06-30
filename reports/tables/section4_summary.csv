@@ -1,0 +1,3 @@
+group,bookings,avg_booking_value,avg_stay_length,cancellation_rate
+Regular,10994,31327.68,2.85,18.91
+Holiday Adjacent,1006,31158.23,2.9,22.17

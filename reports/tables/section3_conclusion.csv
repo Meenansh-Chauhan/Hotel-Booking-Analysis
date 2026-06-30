@@ -1,0 +1,6 @@
+Area,Conclusion
+Schema Design,Normalized 4-table schema reduces redundancy and improves maintainability.
+Constraint,CHECK(checkout_date > checkin_date) prevents invalid stay records.
+Index,booking_date index improves time-series query performance.
+B-Q1,Standard rooms are the most booked room type across all property categories.
+B-Q2,Window functions enable efficient cumulative revenue analysis.

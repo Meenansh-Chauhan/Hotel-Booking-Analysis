@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+jupyter
+notebook
+openpyxl
+requests
+sqlalchemy
+tabulate
+scipy

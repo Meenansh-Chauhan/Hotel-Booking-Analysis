@@ -1,0 +1,6 @@
+Issue,Count,Percentage
+Invalid Stay Dates,120,1.0
+Booking Before Signup,163,1.36
+Zero Room Bookings,60,0.5
+Property Names Reused Across Cities,4,0.03
+Cancelled Bookings With Reviews,50,0.42

@@ -1,0 +1,6 @@
+Analysis Area,Finding,Value,Business Interpretation
+Holiday Tagging,Holiday Adjacent Bookings,1006 bookings (8.38% of total),Meaningful holiday segment identified using public holiday proximity.
+Booking Value,Average Booking Value Comparison,"₹31,158 vs ₹31,328",Holiday bookings do not generate materially higher booking value.
+Stay Length,Average Stay Length Comparison,2.90 vs 2.85 nights,Holiday travelers stay slightly longer.
+Cancellation Behaviour,Cancellation Rate Comparison,22.17% vs 18.91%,Holiday bookings exhibit higher cancellation risk.
+Business Insight,Recommended Action,Review holiday cancellation policy,Stricter holiday cancellation rules may improve revenue reliability.

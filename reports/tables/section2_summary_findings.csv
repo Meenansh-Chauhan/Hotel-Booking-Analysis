@@ -1,0 +1,10 @@
+Analysis Area,Finding,Value,Business Interpretation
+Discount Landscape,Platform Discount Intensity,5.33%,Overall platform discount intensity across completed bookings.
+Discount Landscape,Highest Discount Channel,OTA (7.30%),OTA exceeds platform average by 1.97 percentage points.
+Customer Mix,OTA Customer Composition,Individual travelers +7.72pp vs platform,OTA attracts more price-sensitive individual travelers.
+Loyalty Mix,OTA Loyalty Composition,Very similar to platform,Loyalty mix does not explain elevated OTA discounts.
+City Mix,OTA Geographic Composition,Very similar to platform,City mix does not explain elevated OTA discounts.
+Coupon Effectiveness,Cancellation Rate Impact,-0.61pp cancellation rate,Coupons provide only a marginal reduction in cancellations.
+Coupon Effectiveness,Per Room Amount Impact,-13.45% per-room value,Coupon users generate significantly lower booking value.
+Coupon Effectiveness,Repeat Behaviour Impact,-2.11pp repeat rate,Coupon users are less likely to be repeat customers.
+Margin Recovery,Estimated Recoverable Margin,₹4.86 Million,Reducing OTA coupon spend by 50% can recover margin with manageable risk.

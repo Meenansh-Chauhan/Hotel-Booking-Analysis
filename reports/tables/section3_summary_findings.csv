@@ -1,0 +1,9 @@
+Component,Implementation,Business Justification
+Schema Design,4-table relational schema,Separates entities and reduces redundancy
+Normalization,"Customers, Properties, Bookings, Reviews",Improves data consistency and scalability
+Primary Keys,"customer_id, property_id, booking_id",Ensures entity uniqueness
+Foreign Keys,"Customer→Bookings, Property→Bookings, Booking→Reviews",Maintains referential integrity
+Constraint,CHECK(checkout_date > checkin_date),Prevents invalid stay records
+Index,booking_date,Optimizes time-based analytical queries
+B-Q1 Result,Most booked room type by property type using DENSE_RANK(),Identifies room preferences across property categories
+B-Q2 Objective,Monthly realized revenue and cumulative revenue using window functions,Tracks revenue growth trends over time
