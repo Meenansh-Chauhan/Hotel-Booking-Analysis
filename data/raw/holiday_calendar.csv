@@ -1,0 +1,22 @@
+HolidayDate,HolidayName,HolidayType,IsHoliday,IsWeekend,Month,Quarter,Season,LongWeekend
+2024-01-01,New Year's Day,Observance,True,False,January,Q1,Winter,False
+2024-01-15,Makar Sankranti,Festival,True,False,January,Q1,Winter,False
+2024-01-26,Republic Day,National,True,False,January,Q1,Winter,False
+2024-03-08,Maha Shivaratri,Festival,True,False,March,Q1,Spring,False
+2024-03-25,Holi,Festival,True,False,March,Q1,Spring,False
+2024-03-29,Good Friday,Public,True,False,March,Q1,Spring,True
+2024-04-09,Ugadi,Festival,True,False,April,Q2,Summer,False
+2024-04-11,Eid al-Fitr,Festival,True,False,April,Q2,Summer,False
+2024-04-17,Ram Navami,Festival,True,False,April,Q2,Summer,False
+2024-05-23,Buddha Purnima,Festival,True,False,May,Q2,Summer,False
+2024-06-17,Eid al-Adha,Festival,True,False,June,Q2,Monsoon,False
+2024-07-17,Muharram,Festival,True,False,July,Q3,Monsoon,False
+2024-08-15,Independence Day,National,True,False,August,Q3,Monsoon,False
+2024-08-19,Raksha Bandhan,Festival,True,False,August,Q3,Monsoon,False
+2024-08-26,Janmashtami,Festival,True,False,August,Q3,Monsoon,False
+2024-09-07,Ganesh Chaturthi,Festival,True,True,September,Q3,Monsoon,True
+2024-10-02,Gandhi Jayanti,National,True,False,October,Q4,Autumn,False
+2024-10-12,Dussehra,Festival,True,True,October,Q4,Autumn,True
+2024-10-31,Diwali,Festival,True,False,October,Q4,Autumn,False
+2024-11-15,Guru Nanak Jayanti,Festival,True,False,November,Q4,Autumn,False
+2024-12-25,Christmas,Public,True,False,December,Q4,Winter,False
