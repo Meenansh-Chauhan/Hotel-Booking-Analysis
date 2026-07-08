@@ -1,13 +1,32 @@
-Hotel Booking Analytics — Combined Project
+# Hotel Booking Analytics — Combined Project
 
-Project Overview
+## Project Overview
 
 This project presents a full-stack data analytics study of hotel booking behavior across two complementary datasets comprising 42,000 booking transactions from an online travel platform. The analysis spans the complete analytics lifecycle: raw data ingestion, SQL schema design, Python-based exploratory analysis, discount and loyalty decomposition, holiday demand engineering, and executive dashboard delivery.
 
 The work integrates two independent analyses — one focused on channel performance, cancellation root cause analysis, and business profitability (30,000 records), and a second focused on discount strategy, OTA behavior, coupon effectiveness, and data engineering (12,000 records) — into a single coherent business narrative.
 
+## Portfolio Highlights
 
-Business Objectives
+✓ 42,000 Booking Records
+
+✓ 4 Relational SQL Tables
+
+✓ 35+ DAX Measures
+
+✓ 3 Interactive Power BI Pages
+
+✓ 20+ Business KPIs
+
+✓ Python ETL Pipeline
+
+✓ SQL Window Functions
+
+✓ Executive Dashboard
+
+✓ Business Recommendations
+
+## Business Objectives
 
 
 Which booking channels deliver the highest revenue, profit, and booking quality — and why?
@@ -19,12 +38,12 @@ What is the recommended strategic roadmap for improving platform profitability?
 
 
 
-Dataset Overview
+## Dataset Overview
 
 Dataset ADataset BRecords30,00012,000Features2420+CoverageChannel, room type, star rating, cancellation, profitability, seasonalityDiscount intensity, OTA behavior, coupon effectiveness, loyalty tiers, holiday demand, SQL schemaTime PeriodMulti-year (booking_date driven)Oct 2021 – Dec 2024
 
-Key Variables (Shared Across Datasets)
 
+### Key Variables (Shared Across Datasets)
 
 booking_channel — Web / OTA / Travel Agent / Corporate Portal / Direct Website
 booking_status — Confirmed / Completed / Cancelled / Failed / No-Show
@@ -39,7 +58,7 @@ checkin_date / checkout_date — Stay duration derivation
 
 
 
-Methodology
+## Methodology
 
 The analysis followed a structured business analytics workflow across both datasets:
 
@@ -59,7 +78,7 @@ Business Recommendation Development — prioritized strategic roadmap
 
 
 
-Key Business Metrics
+## Key Business Metrics
 
 Dataset A — Platform Overview (30,000 Bookings)
 
@@ -70,7 +89,7 @@ Dataset B — Discount & Loyalty Platform (12,000 Bookings)
 MetricValueTotal Bookings12,000Unique Customers800Unique Properties60Completed Bookings9,333 (77.78%)Cancelled Bookings2,302 (19.18%)No-Show Bookings365 (3.04%)Realized Revenue₹294.86 MillionBooked Revenue (Gross)₹375.76 MillionPlatform Discount Intensity5.33%OTA Discount Intensity7.30% (+1.97pp vs platform)Recoverable Margin (OTA Coupon Optimization)₹4.86 Million
 
 
-Key Findings Summary
+## Key Findings Summary
 
 1. Channel Performance
 
@@ -144,19 +163,75 @@ Dataset B shows exponential revenue growth from late 2023 onwards, accelerating 
 April is the peak month for bookings and revenue in Dataset A; the platform otherwise shows stable demand with no strong seasonal troughs.
 Average stay length is approximately 4 days (Dataset A) and 2.85–2.90 nights (Dataset B).
 
+## Power BI Dashboard
 
+The final dashboard consists of three interactive report pages designed for different business stakeholders.
 
-Root Cause Summary
+### Executive Overview
+- Total Revenue
+- Total Bookings
+- Total Customers
+- Average Booking Value
+- ADR
+- Cancellation Rate
+- Revenue by City
+- Revenue by Channel
+
+### Revenue & Booking Insights
+- Revenue Realization
+- Revenue Leakage
+- Revenue Trend
+- Discount vs Revenue
+- Property Type Analysis
+- Booking Channel Analysis
+
+### Customer & Operational Insights
+- Customer Segments
+- Loyalty Tier Analysis
+- Guest Review Ratings
+- Customer Home City Distribution
+- Booking Channel vs Loyalty
+- Hotel Rating Analysis
+
+### DAX Measures
+
+More than 35 business measures were created including:
+
+- Revenue Realization %
+- Revenue Lost
+- Average ADR
+- Average Booking Value
+- Total Customers
+- Average Review
+- Coupon Usage
+- Time Intelligence
+- Running Revenue
+
+### Data Model
+
+The Power BI solution follows a Star Schema architecture:
+
+Fact Bookings
+
+Dim Date
+
+Dim Holiday
+
+Dedicated Measure Table
+
+Relationships optimized for analytical performance.
+
+## Root Cause Summary
 
 #FindingRoot CauseConfidenceRCA-1Travel Agent cancellation rate 27.93%Intermediary relationship reduces customer commitmentHighRCA-2Standard room cancellation rate 23.30%Price-sensitive customers more likely to switch or abandonHighRCA-3Web channel outperforms all othersDirect booking reflects stronger purchase intentHighRCA-4Revenue is volume-driven, not price-drivenStandardized pricing structure across segmentsMediumRCA-54-star properties dominate performanceOptimal affordability-quality balance for broad customer baseMediumRCA-6Lead time does not predict cancellationsCancellation driven by channel and segment factors, not timingHighRCA-7Coupons ineffective for retentionCustomers redeem for monetary benefit, not commitmentMediumRCA-8OTA discounts structurally elevatedOTA customer mix skews Individual (+7.72pp), requiring higher incentivesHighRCA-9Holiday bookings show elevated cancellationHoliday plans are more prone to change than regular travelMedium
 
 
-Business Recommendations
+## Business Recommendations
 
 PriorityRecommendationEvidenceExpected ImpactHighPromote Direct Web Bookings with exclusive incentivesWeb: lowest cancel rate (17.64%), highest profit (₹104.78M)↓ Cancellations, ↑ MarginHighRestructure OTA coupon program — reduce spend by 50%Coupon users: -13.45% per-room value, ₹4.86M recoverable margin₹4.86M margin recoveryHighReduce Travel Agent dependency; migrate customers to direct channelsTravel Agent cancel rate: 27.93%↓ Revenue leakageHighIntroduce retention measures for Standard Room customers (flex rescheduling, non-refundable discounts)Standard room cancel rate: 23.30%, highest volume segmentRecover portion of ₹179.66M at-risk revenueMediumLaunch tiered loyalty program targeting the 46.42% with no loyalty status46.42% of customers have no tier; coupon users show -2.11pp repeat rate↑ Customer lifetime valueMediumEnforce stricter cancellation policy for holiday-adjacent bookingsHoliday cancel rate 22.17% vs 18.91% regular; no booking value premium↓ Holiday revenue leakageMediumExpand 4-star hotel inventory and prioritize its visibility4-star: 12,034 bookings, ₹354.84M revenue — highest in segment↑ Volume-driven revenueLowMaintain and monitor geographic diversificationRevenue balanced across Chennai, Bangalore, Delhi, Mumbai, Goa, etc.Reduce market concentration risk
 
 
-SQL Analysis Highlights
+## SQL Analysis Highlights
 
 A normalized relational schema was designed to support production-grade data storage and analytical queries:
 
@@ -181,29 +256,36 @@ Window function cumulative revenue: SUM(realized_revenue) OVER (ORDER BY booking
 
 
 
-Project Structure
+## Project Structure
 
-Hotel_Booking_Analytics_Combined/
+Hotel_Booking_Analytics/
 │
 ├── README.md
 ├── FINAL_REPORT.md
 ├── requirements.txt
+├── Hotel_Business_Intelligence.pbix           # 3-page interactive dashboard
+├── business_recommendations.md
 │
+├── dashboard/
+│   ├── page 1.png                                # Executive_Overview
+│   ├── page 2.png                                # Revenue_Booking_Insights
+│   └── page 3.png                                # Customer_Operational_Insights
+│ 
 ├── data/
 │   ├── raw/
-│   │   ├── hotel_bookings_A.csv              # 30,000 records
-│   │   └── hotel_bookings_B.csv              # 12,000 records
+│   │   ├── hotel_bookings_final.csv              # 30,000 records
+│   │   ├── hotel_bookings(1).csv                 # 12,000 records
+│   │   └── holiday_calendar.csv                  
 │   └── processed/
-│       ├── hotel_bookings_clean_A.csv
-│       └── completed_bookings_analysis_B.csv
+│       ├── hotel_bookings_clean.csv
+│       └── completed_bookings_analysis.csv
 │
 ├── sql/
 │   ├── schema.sql                            # Normalized 4-table schema
 │   └── queries.sql                           # Window function queries
 │
 ├── notebooks/
-│   ├── 01_EDA_and_Cleaning.ipynb
-│   └── 02_Advanced_Analysis.ipynb
+│   └── hotel_booking_analysis.ipynb
 │
 ├── src/
 │   ├── business_metrics.py
@@ -218,16 +300,13 @@ Hotel_Booking_Analytics_Combined/
 │   ├── customer_analysis.py
 │   ├── city_analysis.py
 │   ├── visualizations.py
-│   └── holiday_tagger/
+│
+├── project/ holiday_tagger/
 │       └── holiday_demand_tagger.py          # Nager.Date API integration
 │
 ├── reports/
-│   ├── FINAL_REPORT.md
 │   ├── figures/                              # All generated charts
 │   └── tables/                              # All CSV summary outputs
-│
-└── powerbi/
-    └── Hotel_Analytics_Dashboard.pbix        # 3-page interactive dashboard
 
 
 Tools & Technologies
