@@ -6,6 +6,9 @@ This project presents a full-stack data analytics study of hotel booking behavio
 
 The work integrates two independent analyses — one focused on channel performance, cancellation root cause analysis, and business profitability (30,000 records), and a second focused on discount strategy, OTA behavior, coupon effectiveness, and data engineering (12,000 records) — into a single coherent business narrative.
 
+## Tooling Note
+AI-assisted tools (Claude, ChatGPT, Gemini) were used to support business framing, narrative structuring, and documentation clarity for this project. All data analysis, SQL/Python development, dashboard construction, and final business recommendations were independently executed and validated.
+
 ## Portfolio Highlights
 
 ✓ 42,000 Booking Records
@@ -28,7 +31,6 @@ The work integrates two independent analyses — one focused on channel performa
 
 ## Business Objectives
 
-
 Which booking channels deliver the highest revenue, profit, and booking quality — and why?
 What are the structural causes of the platform's 20%+ cancellation rate, and where is revenue leakage concentrated?
 Are discount and coupon programs improving customer retention or eroding margin?
@@ -36,7 +38,19 @@ How does holiday proximity affect booking behavior and cancellation risk?
 What customer segments and loyalty tiers represent the largest untapped retention opportunity?
 What is the recommended strategic roadmap for improving platform profitability?
 
+## Requirements Translation
 
+Each business objective above was scoped into a measurable analytical deliverable before development began:
+
+| Business Question | Translated Requirement | Deliverable |
+|---|---|---|
+| Which channels drive revenue/profit? | Channel-level KPI breakdown (volume, revenue, profit, cancellation rate) | Channel Performance module + Dashboard Page 1 |
+| What drives the 20%+ cancellation rate? | Root-cause segmentation by channel, room type, lead time, holiday proximity | RCA module + Root Cause Summary table |
+| Are discounts/coupons helping or hurting? | Discount intensity and repeat-rate comparison, coupon vs non-coupon | Coupon & Discount Decomposition module |
+| How does holiday proximity affect bookings? | Holiday-adjacency flag (±2 days) via external API, compared against booking value/cancellation | Holiday Demand Engineering module |
+| Where's the retention opportunity? | Loyalty tier and segment distribution analysis | Loyalty & Segment module + Dashboard Page 3 |
+
+This translation step ensured each analytical module mapped directly back to a stakeholder-relevant question rather than being built ad hoc.
 
 ## Dataset Overview
 
@@ -62,7 +76,6 @@ checkin_date / checkout_date — Stay duration derivation
 
 The analysis followed a structured business analytics workflow across both datasets:
 
-
 Data Quality Audit — null detection, invalid stays, zero-room bookings, pre-signup records
 Schema Design — normalized 4-table relational model (Customers, Properties, Bookings, Reviews)
 Exploratory Data Analysis — distribution profiling, outlier detection, type standardization
@@ -75,6 +88,7 @@ Seasonality & Revenue Trend Analysis — monthly revenue, cumulative growth, sta
 Holiday Demand Engineering — API-driven holiday tagger, ±2 day adjacency feature
 SQL Analysis — window functions (DENSE_RANK, cumulative SUM OVER) on completed bookings
 Business Recommendation Development — prioritized strategic roadmap
+Cross-Validation — key metrics (cancellation rate, revenue totals, DENSE_RANK outputs) reconciled across Python, SQL, and Power BI outputs before finalizing findings
 
 
 
@@ -163,8 +177,8 @@ Dataset B shows exponential revenue growth from late 2023 onwards, accelerating 
 April is the peak month for bookings and revenue in Dataset A; the platform otherwise shows stable demand with no strong seasonal troughs.
 Average stay length is approximately 4 days (Dataset A) and 2.85–2.90 nights (Dataset B).
 
-## Power BI Dashboard
 
+## Power BI Dashboard
 The final dashboard consists of three interactive report pages designed for different business stakeholders.
 
 ### Executive Overview
@@ -176,6 +190,7 @@ The final dashboard consists of three interactive report pages designed for diff
 - Cancellation Rate
 - Revenue by City
 - Revenue by Channel
+location: ![Executive Overview](dashboard/page_1.png)
 
 ### Revenue & Booking Insights
 - Revenue Realization
@@ -184,6 +199,7 @@ The final dashboard consists of three interactive report pages designed for diff
 - Discount vs Revenue
 - Property Type Analysis
 - Booking Channel Analysis
+location: ![Revenue & Booking Insights](dashboard/page_2.png)
 
 ### Customer & Operational Insights
 - Customer Segments
@@ -192,6 +208,7 @@ The final dashboard consists of three interactive report pages designed for diff
 - Customer Home City Distribution
 - Booking Channel vs Loyalty
 - Hotel Rating Analysis
+location: ![Customer & Operational Insights](dashboard/page_3.png)
 
 ### DAX Measures
 
@@ -232,6 +249,8 @@ PriorityRecommendationEvidenceExpected ImpactHighPromote Direct Web Bookings wit
 
 
 ## SQL Analysis Highlights
+
+This project applies core RDBMS/DBMS design principles — normalization, referential integrity, and indexing — to structure a production-style relational schema rather than working off flat files.
 
 A normalized relational schema was designed to support production-grade data storage and analytical queries:
 
@@ -356,4 +375,4 @@ Conclusion
 
 This combined analysis demonstrates that the platform's most significant profit opportunity lies not in acquiring more bookings, but in improving the quality of existing ones. The Web / Direct channel consistently outperforms intermediaries across every metric. OTA volume is real but structurally expensive — the discount premium and coupon dependency are eroding margin without improving loyalty. Cancellations are concentrated in predictable, manageable segments: Travel Agent bookings, Standard rooms, and holiday windows.
 
-The data makes a clear case: shift acquisition spend toward direct channels, replace blanket coupons with loyalty-linked incentives, and enforce tighter cancellation rules for high-risk windows. These three moves alone have a quantified upside of ₹4.86M+ in recoverable margin and ₹179.66M in at-risk revenue that can be partially retained with targeted intervention.
+The data makes a clear case: shift acquisition spend toward direct channels, replace blanket coupons with loyalty-linked incentives, and enforce tighter cancellation rules for high-risk windows. These three moves alone have a quantified upside of ₹4.86M+ in recoverable margin and ₹179.66M in at-risk revenue that can be partially retained with targeted intervention.`
